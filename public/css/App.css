@@ -1,14 +1,16 @@
 * {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 body {
   background-color: #FAFAFA;
   margin: 54px 0 0;
-  font-family: 'Roboto', sans-serif;
   color: #262626;
   font-weight: 400;
   font-size: 14px;
+  
 }
 
 .navbar {
@@ -112,6 +114,7 @@ body {
   font-size: 12px;
   cursor: pointer;
   margin-right: 10px;
+
 }
 
 .story .imagem {
@@ -120,8 +123,7 @@ body {
   align-items: center;
   height: 66px;
   width: 66px;
-  background-image: url('../assets/img/story-circle.svg');
-  
+  background-image: url('/public/assets/img/story-circle.svg');  
 }
 
 .story .imagem img {
@@ -149,6 +151,7 @@ body {
   cursor: pointer;
 }
 
+/* ---------------------------------------------------------------------------------------------- */
 .post {
   border-radius: 3px;
   border: 1px solid #DBDBDB;
@@ -211,6 +214,8 @@ body {
 .post:last-child {
   margin-bottom: 18px;
 }
+
+/* ---------------------------------------------------------------------------- */
 
 .sidebar {
   padding-top: 24px;
@@ -297,6 +302,9 @@ body {
 .copyright {
   margin-top: 18px;
 }
+
+/*--------------------------------------------------------------------------------------------*/
+
 
 .fundo-mobile {
   display: none;
@@ -400,3 +408,41 @@ ion-icon {
   margin-left: 5px;
 }
 
+.conteudo{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+strong{
+  font-weight: 600;
+}
+
+.redLike{
+  color: red;
+}
+
+.blackLike{
+  color: black;
+}
+
+.animation-heart-icon{
+  color: white;
+  position: absolute;
+  scale: 0.01;
+  animation-name: heartLike;
+  animation-duration: 0.3s;
+  animation-delay: 0;
+}
+
+@keyframes heartLike{
+  from{
+    scale: 0.01
+  }
+
+  to{
+    scale: 10;
+    opacity: 0;
+  }
+}
