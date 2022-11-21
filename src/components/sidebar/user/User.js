@@ -6,11 +6,36 @@ export default function User(props) {
     const [userImage, setUserImage] = useState('assets/img/catanacomics.svg');
 
     function changeUserName() {
-        setUserName(prompt('Informe o novo nome: '));
+
+        let userName;
+
+        do {
+            userName = prompt('Informe o novo nome: ');
+
+            if (userName == "") {
+                alert("Nome vazio!");
+                userName = prompt('Informe o novo nome: ');
+            }
+        } while (userName == "");
+
+        setUserName(userName)
     }
 
-    function changeImage(){
-        setUserImage(prompt('Informe a nova imagem'));
+    function changeImage() {
+
+        let userImage;
+
+        do {
+            userImage = prompt('Informe o link da nova imagem: ');
+
+            if (userImage == "") {
+                alert("Url vazio!");
+                userImage = prompt('Informe o link da nova imagem: ');
+
+            }
+        } while (userImage == "");
+
+        setUserImage(userImage)
     }
 
     return (
